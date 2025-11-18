@@ -14,7 +14,7 @@ LDFLAGS ?= -Wl,-Os -pie
 CFLAGS  += $(shell $(PKG_CONFIG) --cflags x11 xinerama xft freetype2 fontconfig)
 LDLIBS  += $(shell $(PKG_CONFIG) --libs   x11 xinerama xft freetype2 fontconfig) -lm
 
-PREFIX  ?= /usr/local
+PREFIX  ?= /usr
 BIN     := sxbar
 SRC_DIR := src
 OBJ_DIR := build
