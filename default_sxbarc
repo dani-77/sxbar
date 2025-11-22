@@ -42,3 +42,8 @@ module.2.name	    : mem
 module.2.cmd	    : free -h | awk '/^Mem/ { print $3 }' | sed s/i//g
 module.2.enabled    : true
 module.2.interval   : 3
+
+module.6.name	    : wlan
+module.6.cmd	    : cat /sys/class/net/wl*/operstate 2>/dev/null
+module.6.enabled    : false
+module.6.interval   : 30
